@@ -1,0 +1,15 @@
+.container{
+    background-color:none;
+}
+.sideDiv{
+
+    padding:10px;
+    border:1px solid black;
+}
+#left{
+    background-color:orange;
+}
+#right{
+
+    background-color: turquoise;
+}
