@@ -1,0 +1,10 @@
+.container-fluid{
+
+    background-color:black;
+}
+p{
+    color:white;
+}
+.searchbar{
+    border-right:2px solid white;
+}
