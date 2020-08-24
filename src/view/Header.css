@@ -8,3 +8,10 @@ p{
 .searchbar{
     border-right:2px solid white;
 }
+.nav-item:hover{
+
+    background-color:white;
+}
+.linkText:hover{
+    color:black;
+}
