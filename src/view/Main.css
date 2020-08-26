@@ -1,15 +1,13 @@
-.container{
-    background-color:none;
+.container {
+	background-color: none;
 }
-.sideDiv{
-
-    padding:10px;
-    border:none;
+.sideDiv {
+	padding: 10px;
+	border: none;
 }
-#left{
-    background-color:orange;
+#left {
+	background-color: orange;
 }
-#right{
-
-    background-color: turquoise;
+#right {
+	background-color: turquoise;
 }

@@ -1,17 +1,13 @@
-.container-fluid{
-
-    background-color:black;
+.linkText {
+	color: white;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-size: 1.5rem;
+	text-align: center;
 }
-p{
-    color:white;
+.linkText:hover {
+	color: black;
 }
-.searchbar{
-    border-right:2px solid white;
-}
-.nav-item:hover{
-
-    background-color:white;
-}
-.linkText:hover{
-    color:black;
+.navLink:hover {
+	background-color: white;
+	color: black;
 }
