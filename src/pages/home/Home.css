@@ -1,0 +1,13 @@
+.HomeContainer {
+  display: inline-flex;
+  justify-content: center;
+  height: max-content;
+  padding: 5px;
+  margin-top: 1vw;
+  width: 80%;
+  background-color: #202020;
+  border: none;
+}
+p {
+  color: white;
+}

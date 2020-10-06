@@ -1,20 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+/* import logo from "./logo.svg"; */
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Layer from "./hoc/Layer/Layer";
 
-import Header from "./view/Header";
-import Main from "./view/Main";
-import Footer from "./view/Footer";
-
-class App extends Component {
-	render() {
-		return (
-			<div className="App">
-				<Header />
-				<Main />
-				<Footer />
-			</div>
-		);
-	}
+function App() {
+  return (
+    <div className="App">
+      <Layer />
+    </div>
+  );
 }
+
 export default App;

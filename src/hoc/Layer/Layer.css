@@ -1,0 +1,12 @@
+.LayerContainer {
+  width: 100%;
+  height: max-content;
+  background-color: black;
+  padding: 2px;
+  text-align: center;
+}
+.cent {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
