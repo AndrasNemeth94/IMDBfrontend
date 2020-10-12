@@ -8,11 +8,53 @@ import LogIn from "../../pages/LogIn/LogIn";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SideDrawer from "../../components/Navbar/SideDrawer/SideDrawer";
 import Backdrop from "../../components/Backdrop/Backdrop";
+import moviesJSON from "../../dummyDB/movies.json";
+import genreJSON from "../../dummyDB/genre.json";
+import seriesJSON from "../../dummyDB/series.json";
 
 class Layer extends Component {
   state = {
+    Genres: [],
+    Series: [],
+    Movies: [],
+    searchedId: null,
     sideDrawerOpen: false,
   };
+  routes = [
+    {
+      path: "/",
+      component: Home,
+    },
+    {
+      path: "/Aboutus",
+      component: AboutUs,
+    },
+    {
+      path: "/Login",
+      component: LogIn,
+    },
+  ];
+  componentDidMount() {
+    let getMovies;
+    let getGenres;
+    let getSeries;
+    getMovies = moviesJSON.map((movie) => {
+      return movie;
+    });
+    getSeries = seriesJSON.map((series) => {
+      return series;
+    });
+    getGenres = genreJSON.map((genre) => {
+      return genre;
+    });
+
+    this.setState({
+      Movies: getMovies,
+      Series: getSeries,
+      Genres: getGenres,
+    });
+  }
+
   toggleClickHandler = () => {
     this.setState((prevState) => {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
@@ -28,12 +70,12 @@ class Layer extends Component {
 
     if (this.state.sideDrawerOpen) {
       sideDrawer = <SideDrawer />;
-      backdrop = <Backdrop click={this.backdropClickHandler} />;
+      backdrop = <Backdrop backdropClick={this.backdropClickHandler} />;
     }
 
     return (
       <Router>
-        <div className="LayerContainer">
+        <div className="layer-container">
           {sideDrawer}
           {backdrop}
 

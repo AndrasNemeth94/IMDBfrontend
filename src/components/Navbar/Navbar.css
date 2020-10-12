@@ -1,18 +1,18 @@
-.Navbar {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: max-content;
   background-color: #202020;
 }
-.logoimg {
+.nav-logo {
   width: 70%;
   padding: 5px;
 }
-.spacer {
+.nav-spacer {
   width: 80%;
 }
-.navLinks {
+.nav-links {
   display: flex;
   width: 20%;
   justify-content: space-around;
@@ -21,7 +21,7 @@
   list-style: none;
   color: white;
 }
-.navLink {
+.nav-link {
   color: white;
   font-weight: bold;
   display: inline-flex;
@@ -35,20 +35,20 @@
   color: black;
 }
 @media (max-width: 600px) {
-  .Navbar {
+  .navbar {
     justify-content: space-around;
   }
-  .logoimg {
+  .nav-logo {
     width: 90px;
     height: 42px;
   }
-  .navLink {
+  .nav-link {
     font-size: 12px;
   }
-  .navLinks {
+  .nav-links {
     display: none;
   }
-  .spacer {
+  .nav-spacer {
     width: 8%;
   }
 }

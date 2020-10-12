@@ -3,7 +3,7 @@ import "../home/Home.css";
 
 function LogIn() {
   return (
-    <div className="HomeContainer">
+    <div className="home-container">
       <p>Login works</p>
     </div>
   );

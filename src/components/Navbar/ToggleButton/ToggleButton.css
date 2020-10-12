@@ -1,4 +1,4 @@
-.ToggleButtonContainer {
+.toggle-button-container {
   display: none;
   flex-direction: column;
   justify-content: space-around;
@@ -11,16 +11,16 @@
   cursor: pointer;
   box-sizing: border-box;
 }
-.ToggleButtonContainer:focus {
+.toggle-button-container:focus {
   outline: none;
 }
-.separator {
+.togllebutton-separator-a {
   height: 3px;
   width: 30%;
   background: gold;
   transform: rotate(40deg);
 }
-.separator2 {
+.togllebutton-separator-b {
   height: 3px;
   width: 30%;
   background: gold;
@@ -28,7 +28,7 @@
 }
 
 @media (max-width: 600px) {
-  .ToggleButtonContainer {
+  .toggle-button-container {
     display: flex;
   }
 }

@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import "./SideDrawer.css";
 
 const SideDrawer = (props) => (
-  <nav className="SideDrawerContainer">
-    <ul className="navLinksMobile">
-      <Link to="/" className="navLinkMobile">
+  <nav className="sidedrawer-container">
+    <ul className="sidedrawer-mobile-links">
+      <Link to="/" className="sidedrawer-mobile-link">
         <li>HOME</li>
       </Link>
-      <Link to="/Aboutus" className="navLinkMobile">
+      <Link to="/Aboutus" className="sidedrawer-mobile-link">
         <li>ABOUT US</li>
       </Link>
-      <Link to="/Login" className="navLinkMobile">
+      <Link to="/Login" className="sidedrawer-mobile-link">
         <li>LOG IN</li>
       </Link>
     </ul>

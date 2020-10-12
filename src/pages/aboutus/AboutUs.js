@@ -3,7 +3,7 @@ import "../home/Home.css";
 
 function AboutUs() {
   return (
-    <div className="HomeContainer">
+    <div className="home-container">
       <p>AboutUs works</p>
     </div>
   );

@@ -1,4 +1,4 @@
-.SideDrawerContainer {
+.sidedrawer-container {
   height: 100%;
   background: #202020;
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
@@ -9,7 +9,7 @@
   max-width: 400px;
   z-index: 200;
 }
-.navLinksMobile {
+.sidedrawer-mobile-links {
   height: 100vh;
   width: 100%;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   color: white;
   /*  background-color: red; */
 }
-.navLinkMobile {
+.sidedrawer-mobile-link {
   display: flex;
   color: white;
   font-weight: bold;

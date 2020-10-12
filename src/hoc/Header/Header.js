@@ -2,10 +2,10 @@ import React from "react";
 import "./Header.css";
 import Navigation from "../../components/Navbar/Navbar";
 
-const Header = (props) => {
+const Header = ({ toggleClickHandler }) => {
   return (
-    <div className="HeaderContainer">
-      <Navigation toggleHandler={props.toggleClickHandler} />
+    <div className="header-container">
+      <Navigation toggleHandler={toggleClickHandler} />
     </div>
   );
 };
