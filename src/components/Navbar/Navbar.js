@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import ToggleButton from "./ToggleButton/ToggleButton";
-import SearchBar from "../Navbar/Searchbar/SearchBar";
+import ToggleButton from "../Navbar/ToggleButton/ToggleButton";
+import translate from "../../i18n/messages/translate";
 
-const Navigation = ({ toggleHandler }) => {
+const Navigation = ({ toggleHandler, onClickLang }) => {
+  const hunPic = "hu-ic.png";
+  const enPic = "en-ic.png";
+  const [flagIMG, setFlagIMG] = useState(hunPic);
+
+  const switchImage = () => {
+    let img = hunPic;
+    if (flagIMG === hunPic) {
+      img = enPic;
+    } else {
+      img = hunPic;
+    }
+    setFlagIMG(img);
+  };
   return (
     <nav className="navbar">
       <div>
@@ -17,18 +30,29 @@ const Navigation = ({ toggleHandler }) => {
           alt="logo"
         ></img>
       </Link>
-      <div className="nav-spacer ">
-        <SearchBar />
-      </div>
+      <button
+        className="set-lang"
+        onClick={(event) => {
+          onClickLang();
+          switchImage();
+        }}
+      >
+        <img
+          className="flag"
+          src={require(`../../assets/img/${flagIMG}`)}
+          alt="flag"
+        />
+      </button>
+      <div className="nav-spacer "></div>
       <ul className="nav-links">
         <Link to="/" className="nav-link">
-          <li>HOME</li>
+          <li className="nav-link-element">{translate("Home")}</li>
         </Link>
         <Link to="/Aboutus" className="nav-link">
-          <li>ABOUT US</li>
+          <li className="nav-link-element">{translate("About")}</li>
         </Link>
         <Link to="/Login" className="nav-link">
-          <li>LOG IN</li>
+          <li className="nav-link-element">{translate("Login")}</li>
         </Link>
       </ul>
     </nav>
