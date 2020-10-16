@@ -7,6 +7,15 @@
   background-color: none;
   border: none;
 }
+.h1-mov {
+  display: inline-block;
+  position: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.separator {
+  width: 300px;
+  border: 1px solid gold;
+}
 p {
   color: white;
 }
