@@ -1,0 +1,18 @@
+.home-container {
+  display: inline-block;
+  padding-top: 80px;
+  min-width: 80%;
+  min-height: 95vh;
+  padding: 20;
+  background-color: none;
+  border: none;
+}
+p {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .home-container {
+    padding-top: 40px;
+  }
+}

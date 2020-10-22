@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "horror"
+  },
+  {
+    "id": "2",
+    "name": "comedy"
+  },
+  {
+    "id": "3",
+    "name": "romance"
+  },
+  {
+    "id": "4",
+    "name": "thriller"
+  },
+  {
+    "id": "5",
+    "name": "action"
+  },
+  {
+    "id": "6",
+    "name": "anime"
+  },
+  {
+    "id": "7",
+    "name": "cartoon"
+  },
+  {
+    "id": "8",
+    "name": "drama"
+  },
+  {
+    "id": "9",
+    "name": "fantasy"
+  },
+  {
+    "id": "10",
+    "name": "historical"
+  }
+]
