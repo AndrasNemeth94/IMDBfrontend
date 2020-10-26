@@ -2,12 +2,12 @@ import React from "react";
 import "./Header.css";
 import Navigation from "../../components/Navbar/Navbar";
 
-const Header = ({ toggleClickHandler, clickChangeLang }) => {
+const Header = ({ sideDrawerSwitch, clickChangeLang }) => {
   return (
     <div className="header-container">
       <Navigation
-        toggleHandler={toggleClickHandler}
-        onClickLang={clickChangeLang}
+        sideDrawerSwitch={sideDrawerSwitch}
+        languageChange={clickChangeLang}
       />
     </div>
   );

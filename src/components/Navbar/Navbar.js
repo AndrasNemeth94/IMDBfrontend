@@ -2,26 +2,29 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import ToggleButton from "../Navbar/ToggleButton/ToggleButton";
-import translate from "../../i18n/messages/translate";
+import NavList from "./navList/NavList";
 
-const Navigation = ({ toggleHandler, onClickLang }) => {
-  const hunPic = "hu-ic.png";
-  const enPic = "en-ic.png";
-  const [flagIMG, setFlagIMG] = useState(hunPic);
+const Navigation = ({ sideDrawerSwitch, languageChange }) => {
+  const hunIMG = "hu-ic.png";
+  const enIMG = "en-ic.png";
+  const [flagIMG, setFlagIMG] = useState(hunIMG);
 
-  const switchImage = () => {
-    let img = hunPic;
-    if (flagIMG === hunPic) {
-      img = enPic;
-    } else {
-      img = hunPic;
+  const switchFlagIMG = () => {
+    switch (flagIMG) {
+      case hunIMG:
+        setFlagIMG(enIMG);
+        break;
+      case enIMG:
+        setFlagIMG(hunIMG);
+        break;
+      default:
+        setFlagIMG(hunIMG);
     }
-    setFlagIMG(img);
   };
   return (
     <nav className="navbar">
       <div>
-        <ToggleButton click={toggleHandler} />
+        <ToggleButton click={sideDrawerSwitch} />
       </div>
       <Link to="/">
         <img
@@ -33,8 +36,8 @@ const Navigation = ({ toggleHandler, onClickLang }) => {
       <button
         className="set-lang"
         onClick={(event) => {
-          onClickLang();
-          switchImage();
+          languageChange();
+          switchFlagIMG();
         }}
       >
         <img
@@ -44,17 +47,7 @@ const Navigation = ({ toggleHandler, onClickLang }) => {
         />
       </button>
       <div className="nav-spacer "></div>
-      <ul className="nav-links">
-        <Link to="/" className="nav-link">
-          <li className="nav-link-element">{translate("Home")}</li>
-        </Link>
-        <Link to="/Aboutus" className="nav-link">
-          <li className="nav-link-element">{translate("About")}</li>
-        </Link>
-        <Link to="/Login" className="nav-link">
-          <li className="nav-link-element">{translate("Login")}</li>
-        </Link>
-      </ul>
+      <NavList />
     </nav>
   );
 };
