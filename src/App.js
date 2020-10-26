@@ -11,12 +11,8 @@ import SideDrawer from "../src/components/Navbar/SideDrawer/SideDrawer";
 import Backdrop from "../src/components/Backdrop/Backdrop";
 
 const App = () => {
-  let backdrop;
-  let sideDrawer;
-  let sideDrawerState = false;
   const [localeSetting, setLocaleSetting] = useState(LOCALES.HUNGARIAN);
-
-  const [sideDrawerOpen, setsideDrawerOpen] = useState(sideDrawerState);
+  const [sideDrawerOpen, setsideDrawerOpen] = useState(false);
 
   const backdropClickHandler = () => {
     setsideDrawerOpen(false);
@@ -25,32 +21,36 @@ const App = () => {
   const sideDrawerChanger = () => {
     setsideDrawerOpen((prevDrawer) => !prevDrawer.sideDrawerOpen);
   };
+  const getSIdeDrawerandBackdrop = () => {
+    return (
+      <div>
+        <SideDrawer />
+        <Backdrop backdropClick={backdropClickHandler} />
+      </div>
+    );
+  };
   const clickOnSetting = () => {
-    let lang;
-
-    if (localeSetting === LOCALES.HUNGARIAN) {
-      lang = LOCALES.ENGLISH;
-    } else {
-      lang = LOCALES.HUNGARIAN;
+    switch (localeSetting) {
+      case LOCALES.HUNGARIAN:
+        setLocaleSetting(LOCALES.ENGLISH);
+        break;
+      case LOCALES.ENGLISH:
+        setLocaleSetting(LOCALES.HUNGARIAN);
+        break;
+      default:
+        setLocaleSetting(LOCALES.HUNGARIAN);
     }
-    setLocaleSetting(lang);
   };
 
-  if (sideDrawerOpen === true) {
-    sideDrawer = <SideDrawer />;
-    backdrop = <Backdrop backdropClick={backdropClickHandler} />;
-  }
   return (
     <div className="App">
       <I18nProvider locale={localeSetting}>
         <div className="app-container">
           <Router>
             <div className="layer-container">
-              {sideDrawer}
-              {backdrop}
-
+              {sideDrawerOpen ? getSIdeDrawerandBackdrop() : null}
               <Header
-                toggleClickHandler={sideDrawerChanger}
+                sideDrawerSwitch={sideDrawerChanger}
                 clickChangeLang={clickOnSetting}
               />
 
