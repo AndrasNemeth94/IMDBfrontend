@@ -24,5 +24,21 @@ export default {
     "5":"Csillagainkban a hiba",
     "6":"Tokió Drift",
 
+    "bioName":"név",
+    "bioPosition":"pozíció",
+    "bioThoughts":"gondolatok",
+
+    "name1":"Németh András",
+    "pos1":"Front-End fejlesztő",
+    "thoughts1":"Ingyen dolgozok nem is tudom minek...",
+
+    "name2":"Zsíros Dominik",
+    "pos2":"Projekt Manager",
+    "thoughts2":"Ez nem best practice! Csináljátok már!",
+
+    "name3":"Fási Milán",
+    "pos3":"Back-End fejlesztő",
+    "thoughts3":"Jók a Filmek képek nélkül. Egyébként egy LoL?"
+
   },
 };
